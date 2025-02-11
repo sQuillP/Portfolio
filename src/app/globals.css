@@ -7,6 +7,8 @@ body {
   width: var(--body-width);
   margin: 0 auto;
   background: var(--bg-primary);
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 p, h1 {

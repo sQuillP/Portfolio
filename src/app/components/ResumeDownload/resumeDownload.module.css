@@ -1,0 +1,11 @@
+.main {
+    border: 2px solid var(--border);
+    cursor: pointer;
+    background: none;
+    border-radius: var(--border-radius);
+    
+}
+
+.main:hover {
+    background: var(--bg-secondary)
+}

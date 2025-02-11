@@ -1,12 +1,12 @@
 .sLinks {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    ;
+    margin-top: 50px;
 }
 
 .sLink {
-    margin: 0 10px;
+    margin: 0 15px 0 0;
 }
 
 .sLink >* {
@@ -15,15 +15,4 @@
 
 .sLink >:hover {
     color: var(--text-primary);
-}
-
-
-.profile {
-    border-radius: var(--border-radius);
-    overflow: hidden;
-}
-
-@media screen and (max-width: var(--body-width)) {
-
-
 }

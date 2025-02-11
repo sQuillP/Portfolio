@@ -1,11 +1,13 @@
+"use client";
 import s from "./navbar.module.css";
 import Link from "next/link";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSun } from "@fortawesome/free-solid-svg-icons";
-
+import setTheme from "@/utility/setTheme";
 
 export default function Navbar() {
- 
+    
+
     return (
         <nav className={s.mainNavbar}>
             <div className={s.navSection}>
@@ -26,7 +28,7 @@ export default function Navbar() {
             </div>
             <div className={s.navSection}>
                 <div className={s.navItem}>
-                    <div className={s.toggleWrapper}>
+                    <div role="button" onClick={setTheme} className={s.toggleWrapper}>
                         <FontAwesomeIcon color='#FFD700' size='lg' icon={faSun} />
                     </div>
                 </div>

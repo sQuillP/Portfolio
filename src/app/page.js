@@ -2,6 +2,7 @@ import Link from "next/link";
 import SocialLinks from "./components/SocialLinks/SocialLinks";
 import s from './page.module.css';
 import Image from "next/image";
+import ResumeDownload from "./components/ResumeDownload/ResumeDownload";
 
 
 /**
@@ -34,16 +35,23 @@ export default function Home() {
     <div>
       <section>
         <div>
-          <div>
-            <h1 className={s.h1}>Hi, Will here</h1>
-            <p className={s.p}>I am a {Math.floor(calculateYears(BIRTHDAY))} year old software engineer currently based in Indianapolis.</p>
-            <p className={s.p}>I enjoy running, juggling, and sometimes riding unicycles.</p>
+          <div className={s.topDesc}>
+
+            <div className={s.textDetails}>
+              <h1 className={s.h1}>Hey! I'm Will</h1>
+              <p className={s.p}>I am a {Math.floor(calculateYears(BIRTHDAY))} year old software engineer currently based in Indianapolis.</p>
+              <p className={s.p}>Some abnormal talents of mine include juggling and riding unicycles (but not both).</p>
+              <ResumeDownload/>
+              <SocialLinks/>
+            </div>
+
+            <div className={s.profileContainer}>
+              <Image alt="wat" height={150} width={150} src={'/profile.webp'}/>
+            </div>
+
           </div>
-          <div className={s.profileContainer}>
-            <Image alt="wat" height={200} width={200} className={s.profile} src={'/profile.webp'}/>
-          </div>
+
         </div>
-          <SocialLinks/>
       </section>
     </div>
   );

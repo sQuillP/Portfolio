@@ -1,7 +1,44 @@
 .p {
     color: var(--text-primary-2);
+    font-size: var(--p);
+    line-height: 1.5em;
+    margin-bottom: 12px;;
 }
 
 .h1 {
     color: var(--text-primary);
+    font-size: var(--header);
+    margin-bottom: 12px;
+}
+
+.profileContainer {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    height: 150px;
+    width: 150px;
+    align-self: center;
+}
+
+.textDetails {
+    width: 500px;
+}
+
+.topDesc {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+@media screen and (max-width: 699px) {
+
+    .profileContainer {
+        display: none;
+    }
+
+    .topDesc {
+        justify-content: center;
+    }
+    
+
 }
