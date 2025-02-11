@@ -1,42 +1,76 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+html {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  width: var(--body-width);
+  margin: 0 auto;
+  background: var(--bg-primary);
 }
 
-* {
-  box-sizing: border-box;
+p, h1 {
   padding: 0;
   margin: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+:root {
+  /* ---- dark mode ---- */
+  --darkmode-bg-primary: rgb(3, 7, 18);
+  --darkmode-bg-secondary: #1f2937;
+  --darkmode-border: #1f2937;
+  --darkmode-accent-1: #bb86fc;
+  --darkmode-accent-2: #03dac6;
+  --darkmode-navbar-bg: rgba(3, 7, 18, 0.7);
+
+  /* Typography */
+  --darkmode-text-primary: #ffffff;
+  --darkmode-text-primary-2: #f1f1f1;
+  --darkmode-text-secondary:#bbbbbb;
+  --darkmode-text-secondary-2:#999999;
+
+  /* ---- light mode ---- */
+  --lightmode-bg-primary: #ffffff;
+  --lightmode-bg-secondary:#f3f4f6;
+  --lightmode-border: #e5e7eb;
+  --lightmode-accent-1: #0070f3;
+  --lightmode-accent-2: #ff4081;
+  --lightmode-navbar-bg: rgba(255, 255, 255, 0.6);
+
+
+  /* Typography */
+  --lightmode-text-primary: #000000;
+  --lightmode-text-primary-2: #333333;
+  --lightmode-text-secondary: #666666;
+  --lightmode-text-secondary-2: #888888;
+
+  /* ----- Default/current presets ---- */
+  --bg-primary: var(--darkmode-bg-primary);
+  --bg-secondary: var(--darkmode-bg-secondary);
+  --accent-1: var(--darkmode-accent-1);
+  --accent-2: var(--darkmode-accent-2);
+  --border: var(--darkmode-border);
+  --navbar-bg: var(--darkmode-navbar-bg);
+
+
+  --text-primary: var(--darkmode-text-primary);
+  --text-primary-2: var(--darkmode-text-primary-2);
+  --text-secondary: var(--darkmode-text-secondary);
+  --text-secondary-2: var(--darkmode-text-secondary-2);
+
+  
+  /* Other styles unrelated to light/dark */
+  --body-width: 700px;
+  --border-radius: 10px;
+  --intro: 18px;
+  --header: 48px;
+  --p: 16px;
+  --p-2: 14px;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+
+@media screen and (max-width: 699px) {
+  body {
+      width: 100%;
   }
 }

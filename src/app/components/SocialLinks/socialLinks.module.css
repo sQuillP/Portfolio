@@ -1,0 +1,29 @@
+.sLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ;
+}
+
+.sLink {
+    margin: 0 10px;
+}
+
+.sLink >* {
+    transition: 200ms linear color;
+}
+
+.sLink >:hover {
+    color: var(--text-primary);
+}
+
+
+.profile {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+@media screen and (max-width: var(--body-width)) {
+
+
+}

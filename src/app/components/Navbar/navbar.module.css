@@ -1,0 +1,57 @@
+.mainNavbar {
+    background: var(--navbar-bg);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    align-items: center;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    left: 0;;
+    padding: 0px 20px;
+
+}
+
+.navSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+
+.navItem {
+    margin: 0 16px;
+    position: relative;
+}
+
+
+.link {
+    text-decoration: none;
+    color: inherit;
+    font-size: var(--p);
+    font-weight: bold;
+    color: var(--text-secondary-2);
+    transition: 200ms linear all;
+    cursor: pointer;
+    filter: opacity(1) !important;
+}
+
+.toggleWrapper {
+    cursor: pointer;
+    padding: 7px;
+    border-radius: var(--border-radius);
+    transition: 200ms linear all;
+}
+
+.toggleWrapper:hover {
+    background: var(--bg-secondary)
+}
+
+.link:hover {
+    color: var(--text-primary);
+}
