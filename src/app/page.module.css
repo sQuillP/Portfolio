@@ -1,8 +1,9 @@
 .p {
-    color: var(--text-primary-2);
+    color: var(--text-primary);
     font-size: var(--p);
     line-height: 1.5em;
     margin-bottom: 12px;;
+    font-weight: 300;
 }
 
 .h1 {
@@ -14,18 +15,30 @@
 .profileContainer {
     border-radius: var(--border-radius);
     overflow: hidden;
-    height: 150px;
-    width: 150px;
-    align-self: center;
+    height: 170px;
+    width: 170px;
+    align-self: flex-end;
 }
 
-.textDetails {
-    width: 500px;
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
 }
 
 .topDesc {
     display: flex;
     justify-content: space-between;
+}
+
+.textDetails {
+    width: 520px;
+
+}
+
+.clickables {
+    display: flex;
+    margin-top: 35px
+    ;
 }
 
 

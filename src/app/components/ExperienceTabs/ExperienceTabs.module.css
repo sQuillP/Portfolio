@@ -1,0 +1,24 @@
+
+.container {
+    border-radius: var(--border-radius);
+    background: var(--bg-secondary);
+    padding: 5px;
+    margin-top: 50px;
+    display: flex;
+}
+
+.tabButton {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    border: none;
+    outline: none;
+    padding: 5px 0;
+    width: 100%;
+    border-radius: var(--border-radius);
+    font-size: var(--p);
+    cursor: pointer;
+}
+
+.tabButton:last-child {
+    margin-left: 10px;
+}

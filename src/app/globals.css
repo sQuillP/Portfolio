@@ -7,7 +7,6 @@ body {
   width: var(--body-width);
   margin: 0 auto;
   background: var(--bg-primary);
-  padding: 10px;
   box-sizing: border-box;
 }
 
@@ -62,7 +61,7 @@ p, h1 {
 
   
   /* Other styles unrelated to light/dark */
-  --body-width: 700px;
+  --body-width: 714px;
   --border-radius: 10px;
   --intro: 18px;
   --header: 48px;
