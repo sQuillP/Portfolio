@@ -25,10 +25,10 @@ p, h1 {
   --darkmode-navbar-bg: rgba(3, 7, 18, 0.7);
 
   /* Typography */
-  --darkmode-text-primary: #ffffff;
-  --darkmode-text-primary-2: #f1f1f1;
-  --darkmode-text-secondary:#bbbbbb;
-  --darkmode-text-secondary-2:#999999;
+  --darkmode-text-primary: hsl(210 20% 98%);
+  --darkmode-text-primary-2: hsl(217.9 10.6% 64.9%);
+  --darkmode-text-secondary:rgb(209, 213, 219);
+  --darkmode-text-secondary-2:hsl(217.9 10.6% 64.9%);
 
   /* ---- light mode ---- */
   --lightmode-bg-primary: #ffffff;
@@ -67,6 +67,7 @@ p, h1 {
   --header: 48px;
   --p: 16px;
   --p-2: 14px;
+  --p-3: 13px
 }
 
 

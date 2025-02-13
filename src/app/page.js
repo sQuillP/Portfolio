@@ -8,14 +8,20 @@ import { useState } from "react";
 import ExperienceTabs from "./components/ExperienceTabs/ExperienceTabs";
 import { useMemo } from "react";
 
-
+import ExperienceSheet from "./components/ExperienceSheet/ExperienceSheet";
+import myExperiences from '@/config/myExperiences.json';
 
 export default function Home() {
 
-  const WORK = 0;
-  const EDUCATION = 1;
+  const WORK = 'work';
+  const EDUCATION = 'education';
   const BIRTHDAY = '02/26/1999';
   const [selectedTab, setSelectedTab] = useState(WORK);
+  const [experiences, setExperiences] = useState(selectedTab);
+
+
+  console.log(myExperiences);
+
 
   // getting old, gotta optimize this large calulation
   const age =  useMemo(()=> Math.floor(calculateYears(BIRTHDAY)), []);
@@ -49,6 +55,9 @@ export default function Home() {
           EDUCATION={EDUCATION}
           onSelect={(tab)=> setSelectedTab(tab)}
         />
+       <ExperienceSheet
+          experiences={myExperiences[selectedTab]}
+       />
       </section>
     </>
   );

@@ -8,7 +8,6 @@
 }
 
 .tabButton {
-    background: var(--bg-primary);
     color: var(--text-primary);
     border: none;
     outline: none;
@@ -17,6 +16,7 @@
     border-radius: var(--border-radius);
     font-size: var(--p);
     cursor: pointer;
+    transition: 200ms linear background;
 }
 
 .tabButton:last-child {
