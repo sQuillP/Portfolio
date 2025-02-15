@@ -10,6 +10,11 @@ import { useMemo } from "react";
 
 import ExperienceSheet from "./components/ExperienceSheet/ExperienceSheet";
 import myExperiences from '@/config/myExperiences.json';
+import featuredProjects from '@/config/featuredProjects.json';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
+import ProjectCard from "./ProjectCard/ProjectCard";
 
 export default function Home() {
 
@@ -28,7 +33,7 @@ export default function Home() {
 
   return (
     <>
-      <section>
+      <section className={s.section}>
         <div className={s.headerContainer}>
           <div className={s.textDetails}>
             <h1 className={s.h1}>Hey! It's Will ✌️</h1>
@@ -40,7 +45,7 @@ export default function Home() {
             <p className={s.p}>Some abnormal talents of mine include juggling and riding unicycles (but not both).</p>
           </div>
           <div className={s.profileContainer}>
-            <Image alt="wat" height={170} width={170} src={'/profile.webp'}/>
+            <Image alt="wat" height={170} width={170} src={'/profile.jpg'}/>
           </div>
         </div>
         <div className={s.clickables}>
@@ -48,7 +53,7 @@ export default function Home() {
           <SocialLinks/>
         </div>
       </section>
-      <section>
+      <section className={s.section}>
         <ExperienceTabs 
           WORK={WORK} 
           selectedTab={selectedTab}
@@ -58,6 +63,30 @@ export default function Home() {
        <ExperienceSheet
           experiences={myExperiences[selectedTab]}
        />
+      </section>
+      <section className={s.section}>
+        <div className={s.headerDetails}>
+          <p className={s.h2}>Featured Projects</p>
+          <Link 
+            className={s.link} 
+            href={"/projects"}
+          >
+            See More  <FontAwesomeIcon style={{marginLeft: 10}} icon={faArrowRight} size="xl" color="inherit"/>
+          </Link>
+        </div>
+        {
+          featuredProjects.map(fp => {
+            return (
+              <ProjectCard
+                key={fp.title}
+                title={fp.title}
+                description={fp.description}
+                link={fp.link}
+                tags={fp.tags}
+              />
+            )
+          })
+        }
       </section>
     </>
   );

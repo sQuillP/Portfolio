@@ -6,10 +6,21 @@
     font-weight: 300;
 }
 
+
+.section {
+    margin-bottom: 20px;
+}
+
 .h1 {
     color: var(--text-primary);
     font-size: var(--header);
     margin-bottom: 12px;
+}
+
+.h2 {
+    font-size: var(--header-2);
+    font-weight: bold;
+    color: var(--text-primary);
 }
 
 .profileContainer {
@@ -42,6 +53,18 @@
 }
 
 
+.headerDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link {
+    margin: 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--text-primary-2);
+}
 
 @media screen and (max-width: 699px) {
 

@@ -1,0 +1,32 @@
+[
+    {
+        "title":"Conway's Game of Life",
+        "description":"A frontend website built to simulate, edit, and visualize John Conway’s famous cellular automaton",
+        "tags": [
+            "Algorithms",
+            "Simulation",
+            "React.js",
+            "AWS",
+            "Route 53",
+            "MUI",
+            "S3",
+            "CloudFront"
+        ],
+        "link":"https://game-of-life.website/"
+    },
+    {
+        "title":"Devstreamer",
+        "description":" An interactive live coding zoom-like platform for software engineering technical interviews. This site uses video chatting, live code editing, submissions, direct messaging",
+        "tags": [
+            "React.js",
+            "VideoSDK",
+            "Fileshare",
+            "Judge0",
+            "MUI",
+            "API Gateway",
+            "Lambda",
+            "Cloudfront"
+        ],
+        "link":"https://devstreamer.pro/"
+    }
+]

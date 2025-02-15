@@ -8,12 +8,12 @@
             "image":"/tcs_logo.jpg",
             "institution": "Tata Consultancy Services (Eli Lilly & Company Contractor)",
             "experiences": [
-                "Led development of a project enabling multi-lingual support for customer search application.",
-                "Led development of a data pipeline that processed, stored, and shared user consent data with third parties.",
-                "Led development to redesign error handling logic for profile and data ingestion processes, significantly reducing ticket volume.",
-                "Leveraged automation to generate weekly business reports, tracking users who have opted out of communications from Lilly’s Preference Center using Python3 and AWS.",
-                "Handled E2E testing and wrote manual test scripts spanning coverage for all components in various integrations.",
-                "Python3, Next.js, React.js, CloudFormation, CI/CD, Boto3, AWS Athena, Lambda, Glue, S3, DynamoDB, Pandas"
+                "Developed multi-lingual support for customer search application using React.js",
+                "Automated pipelines that processed, stored, and shared user consent data with third parties (Glue, Lambda, boto3, pandas)",
+                "Redesigned error handling logic for profile and data ingestion processes, significantly reducing ticket volume and improving error analysis (PostgreSQL, Lambda, psycopg2).",
+                "Generated insightful business reports using for customers opting out of Lilly's Preference Center communications (Athena, Python3, Lambda)",
+                "Leveraged CI/CD pipelines with AWS Cloudformation for all project deliverables.",
+                "Python3, Next.js, React.js, Boto3, AWS Athena, Lambda, Glue, S3, DynamoDB, Pandas, SNS, SQS"
             ]
         },
         {
@@ -42,7 +42,7 @@
             "location":"Bloomington, Normal",
             "experiences":[
                 "Majored in computer science",
-                "Made Dean's list in 2021 and 2022."
+                "Dean's - 2021 and 2022."
             ]
         },
         {
@@ -50,9 +50,12 @@
             "to": "December 2024",
             "image":"/google.jpg",
             "title": "Associate Cloud Engineer Certified",
-            "institution":"Google",
-            "location":null,
-            "experiences":[]
+            "institution":"Google Cloud Platform",
+            "location":"",
+            "experiences":[
+                "Ability to deploy and secure applications, services, and infrastructure on Google Cloud Platform.",
+                "Experience working with public clouds and on-premises solutions."
+            ]
         }
     ]
 }
