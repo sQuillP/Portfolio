@@ -12,7 +12,7 @@ export default function Navbar() {
         <nav className={s.mainNavbar}>
             <div className={s.navSection}>
                 <div className={s.navItem}>
-                    <Link className={s.link} href={'/home'}>Home</Link>
+                    <Link className={s.link} href={'/'}>Home</Link>
                 </div>
                 <div className={s.navItem}>
                     <Link className={s.link} href={'/projects'}>Projects</Link>
@@ -21,7 +21,7 @@ export default function Navbar() {
                     <Link className={s.link} href={'/blog'}>Blog</Link>
                 </div>
                 <div className={s.navItem}>
-                    <Link className={s.link} href={'/Contact'}>Contact</Link>
+                    <Link className={s.link} href={'/contact'}>Contact</Link>
                 </div>
                 <div className={s.navItem}>
                 </div>

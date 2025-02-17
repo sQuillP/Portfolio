@@ -12,7 +12,9 @@
             "S3",
             "CloudFront"
         ],
-        "link":"https://game-of-life.website/"
+        "link":"https://game-of-life.website/",
+        "image": "/game_of_life.gif",
+        "source":"https://github.com/sQuillP/game-of-life"
     },
     {
         "title":"Devstreamer",
@@ -27,6 +29,24 @@
             "Lambda",
             "Cloudfront"
         ],
-        "link":"https://devstreamer.pro/"
+        "link":"https://devstreamer.pro/",
+        "image": "/devstreamer.png",
+        "source":"https://github.com/sQuillP/codestream"
+    },
+    {
+        "title":"Indy Faith and Work Forum",
+        "description":" A website that hosts monthly seminars that has over 200+ registered attendees. The forum includes an admin dashboard for modifying and updating all site content, email portal to reach out to subscribers, and event scheduler",
+        "tags":[
+            "React.js",
+            "MUI",
+            "DynamoDB",
+            "Lambda",
+            "API Gateway",
+            "S3",
+            "Cloudfront"
+        ],
+        "image":"/ifawf.jpg",
+        "link":"https://indyfaithandworkforum.org/home",
+        "source":"https://github.com/sQuillP/Faith-and-Works-Forum"
     }
 ]

@@ -1,20 +1,21 @@
 "use client";
-import SocialLinks from "./components/SocialLinks/SocialLinks";
+import SocialLinks from "../components/SocialLinks/SocialLinks";
 import s from './page.module.css';
 import Image from "next/image";
-import ResumeDownload from "./components/ResumeDownload/ResumeDownload";
+import ResumeDownload from "../components/ResumeDownload/ResumeDownload";
 import calculateYears from '@/utility/time';
 import { useState } from "react";
-import ExperienceTabs from "./components/ExperienceTabs/ExperienceTabs";
+import ExperienceTabs from "../components/ExperienceTabs/ExperienceTabs";
 import { useMemo } from "react";
 
-import ExperienceSheet from "./components/ExperienceSheet/ExperienceSheet";
+import ExperienceSheet from "../components/ExperienceSheet/ExperienceSheet";
 import myExperiences from '@/config/myExperiences.json';
 import featuredProjects from '@/config/featuredProjects.json';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
-import ProjectCard from "./ProjectCard/ProjectCard";
+import ProjectCard from "@/components/ProjectCard/ProjectCard";
+import BlogPosts from "../components/BlogPosts/BlogPosts";
 
 export default function Home() {
 
@@ -22,10 +23,7 @@ export default function Home() {
   const EDUCATION = 'education';
   const BIRTHDAY = '02/26/1999';
   const [selectedTab, setSelectedTab] = useState(WORK);
-  const [experiences, setExperiences] = useState(selectedTab);
 
-
-  console.log(myExperiences);
 
 
   // getting old, gotta optimize this large calulation
@@ -74,19 +72,34 @@ export default function Home() {
             See More  <FontAwesomeIcon style={{marginLeft: 10}} icon={faArrowRight} size="xl" color="inherit"/>
           </Link>
         </div>
-        {
-          featuredProjects.map(fp => {
-            return (
-              <ProjectCard
-                key={fp.title}
-                title={fp.title}
-                description={fp.description}
-                link={fp.link}
-                tags={fp.tags}
-              />
-            )
-          })
-        }
+        <div className={s.projectCardContainer}>
+          {
+            featuredProjects.map((fp, i) => {
+              if(i < 2) {
+                return (
+                  <ProjectCard
+                    key={fp.title}
+                    {...fp}
+                  />
+                )
+              }
+            })
+          }
+        </div>
+      </section>
+      <section className={s.section}>
+          <div className={s.headerDetails}>
+            <p className={s.h2}>Blog Posts</p>
+            <Link 
+              className={s.link} 
+              href={"/projects"}
+            >
+              See More  <FontAwesomeIcon style={{marginLeft: 10}} icon={faArrowRight} size="xl" color="inherit"/>
+          </Link>
+          </div>
+        <BlogPosts
+          renderCount={3} 
+        />
       </section>
     </>
   );

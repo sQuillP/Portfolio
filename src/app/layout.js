@@ -2,7 +2,8 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from "../components/Navbar/Navbar";
+import Footer from "@/components/Footer/Footer";
 
 config.autoAddCss = false;
 
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
       <body>
         <Navbar/>
         {children}
+        <Footer/>
       </body>
     </html>
   );

@@ -1,0 +1,16 @@
+.main {
+    margin-top: 30px;
+}
+
+.intro {
+    font-size: var(--header);
+    color: var(--text-primary);
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.projectsList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

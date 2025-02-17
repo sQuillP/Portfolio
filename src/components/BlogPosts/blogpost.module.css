@@ -1,0 +1,40 @@
+.main {
+    
+}
+
+.container {
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+}
+
+.blogItem {
+    border-bottom: 1px solid var(--border);
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+
+.title {
+    font-size: var(--intro);
+    color: var(--text-primary);
+}
+
+.description {
+    color: var(--text-secondary-2);
+}
+
+.postedOn {
+    color: var(--text-primary);
+    font-size: 14px;
+}
+
+.blogCol:nth-child(2) {
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
