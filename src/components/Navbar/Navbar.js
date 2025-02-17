@@ -4,9 +4,29 @@ import Link from "next/link";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSun } from "@fortawesome/free-solid-svg-icons";
 import setTheme from "@/utility/setTheme";
+import { useEffect } from "react";
 
 export default function Navbar() {
     
+    useEffect(()=> {
+        const theme = localStorage.getItem("CURRENT_THEME");
+        if(theme === 'light') {
+            setTheme('light');
+        } else {
+            setTheme('dark');
+        }
+    },[]);
+
+
+    function onSetTheme() {
+        const theme = localStorage.getItem("CURRENT_THEME");
+        console.log(theme);
+        if (!theme || theme === 'dark') {
+            setTheme('light');
+        } else {
+            setTheme('dark');
+        }
+    }
 
     return (
         <nav className={s.mainNavbar}>
@@ -28,7 +48,7 @@ export default function Navbar() {
             </div>
             <div className={s.navSection}>
                 <div className={s.navItem}>
-                    <div role="button" onClick={setTheme} className={s.toggleWrapper}>
+                    <div role="button" onClick={onSetTheme} className={s.toggleWrapper}>
                         <FontAwesomeIcon color='#FFD700' size='lg' icon={faSun} />
                     </div>
                 </div>

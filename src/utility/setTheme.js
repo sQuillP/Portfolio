@@ -17,19 +17,19 @@ const presets = [
 /**
  * @description: Just do a loop through the preset styles (see globals.css) and then
  * change it to the other theme that you want.
+ * 
+ * 
  */
-export default function setTheme() {
+export default function setTheme(theme) {
     // if there is no theme, set it to lightmode
-
-    const theme = localStorage.getItem('CURRENT_THEME');
     let newTheme = null;
 
     if (!theme || theme == 'dark') {
         newTheme = 'lightmode';
-        localStorage.setItem("CURRENT_THEME", 'light');
+        localStorage.setItem("CURRENT_THEME", 'dark');
     } else if (theme == 'light') {
         newTheme = 'darkmode';
-        localStorage.setItem("CURRENT_THEME", 'dark');
+        localStorage.setItem("CURRENT_THEME", 'light');
     }
 
     for(const preset of presets) {

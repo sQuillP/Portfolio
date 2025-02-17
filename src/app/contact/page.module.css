@@ -5,3 +5,91 @@
 .title {
     font-size: var(--header);
 }
+
+
+.header {
+    font-size: var(--header);
+    color: var(--text-primary);
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+.input {
+    font-family: inherit;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    border: 1px solid var(--bg-secondary);
+    background: var(--bg-primary);
+    border-radius: var(--border-radius);
+    color: var(--text-primary);
+    transition: box-shadow 200ms linear;
+}
+
+
+.input:focus {
+    box-shadow: 0 0 5px var(--accent-1);
+}
+
+.inputTop {
+    width: 49%;
+    padding: 10px 20px;
+}
+
+.inputs {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.textarea {
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+
+.submitSection {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+.sendButton {
+    border: 2px solid var(--border);
+    padding: 10px 15px;
+    color: var(--text-primary);
+    background: var(--bg-primary);
+    cursor: pointer;
+    transition: background 100ms linear;
+    font-weight: bold;
+    border-radius: var(--border-radius);
+}
+
+.sendButton:hover {
+    background: var(--bg-secondary);
+}
+
+
+.sendButton:hover > .icon {
+    animation: wiggle 500ms linear;
+}
+
+
+@keyframes wiggle  {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(45deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
