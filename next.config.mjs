@@ -4,6 +4,24 @@ import createMDX from '@next/mdx'
 const nextConfig = {
   // Configure `pageExtensions` to include markdown and MDX files
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+  
+  async redirects() {
+    return [
+      // Basic redirect
+      // Catch-all redirect for 404 pages
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'query',
+            key: 'nonexistent',
+          },
+        ],
+        destination: '/',
+        permanent: false,
+      },
+    ]
+  }
   // Optionally, add any other Next.js config below
 }
  
@@ -12,4 +30,4 @@ const withMDX = createMDX({
 })
  
 // Merge MDX config with Next.js config
-export default withMDX(nextConfig)
+export default withMDX(nextConfig);
