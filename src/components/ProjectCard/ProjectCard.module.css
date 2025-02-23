@@ -9,15 +9,22 @@
     flex-direction: column;
     flex-wrap: wrap;
     margin-bottom: 30px;
+    transition: all 200ms linear;
+}
+
+.main:hover {
+    border: 1px solid var(--text-primary);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .cardImage {
-    max-width: 300px;
-    max-height: 160px;;
+    width: 300px;
+    height: 160px;;
     margin: 0 auto;
     overflow: hidden;
     border-radius: var(--border-radius);
     margin-bottom: 20px;
+    position: relative;
 }
 
 
@@ -60,4 +67,17 @@
 
 .link {
     text-decoration: none;
+}
+
+@media screen and (max-width: 750px) {
+    .main {
+        width: 100%;   
+    } 
+}
+
+@media screen and (max-width: 400px) {
+    .cardImage {
+        width: 100%;
+        box-sizing: border-box;
+    }
 }

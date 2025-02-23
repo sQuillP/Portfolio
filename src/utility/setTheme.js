@@ -25,12 +25,14 @@ export default function setTheme(theme) {
     let newTheme = null;
 
     if (!theme || theme == 'dark') {
-        newTheme = 'lightmode';
+        newTheme = 'darkmode';
         localStorage.setItem("CURRENT_THEME", 'dark');
     } else if (theme == 'light') {
-        newTheme = 'darkmode';
+        newTheme = 'lightmode';
         localStorage.setItem("CURRENT_THEME", 'light');
     }
+
+    console.log("setting the new theme to ", newTheme);
 
     for(const preset of presets) {
         document.documentElement.style.setProperty(

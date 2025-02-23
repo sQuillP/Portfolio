@@ -13,17 +13,21 @@ export default function Page() {
     const [mailContent, setMailContent] = useState('');
 
 
+    function onSubmitEmail() {
+        
+    }
+
     return (
         <div className={s.main}>
             <p className={s.header}>Drop a Message</p>
             <div className={s.inputs}>
-                <input onChange={(e)=> setName(e.target.value)} placeholder='Name' className={`${s.input} ${s.inputTop}`}/>
-                <input onChange={(e)=> setEmail(e.target.value)} placeholder='Email' className={`${s.input} ${s.inputTop}`}/>
+                <input value={name} onChange={(e)=> setName(e.target.value)} placeholder='Name' className={`${s.input} ${s.inputTop}`}/>
+                <input value={email} onChange={(e)=> setEmail(e.target.value)} placeholder='Email' className={`${s.input} ${s.inputTop}`}/>
             </div>
             
-            <textarea rows={10} className={`${s.input} ${s.textarea}`} placeholder="Anything you'd like to say?"/>
+            <textarea value={mailContent} onChange={(e)=> setMailContent(e.target.value)} rows={10} className={`${s.input} ${s.textarea}`} placeholder="Anything you'd like to say?"/>
             <div className={s.submitSection}>
-                <button className={s.sendButton}>Send &nbsp; <FontAwesomeIcon className={s.icon} color='var(--text-primary)' icon={faPaperPlane} size='xl'/></button>
+                <button onClick={onSubmitEmail} className={s.sendButton}>Send &nbsp; <FontAwesomeIcon className={s.icon} color='var(--text-primary)' icon={faPaperPlane} size='xl'/></button>
             </div>
         </div>
     )

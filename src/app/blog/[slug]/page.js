@@ -1,10 +1,11 @@
-import {getPostBySlug} from '@/utility/posts';
+import {getPostBySlug, getAllPosts} from '@/utility/posts';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import s from './page.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { notFound } from 'next/navigation';
 
 const mdxConfig = {
     h1: ({children})=> <h1 className={s.h1}>{children}</h1>,
@@ -16,31 +17,35 @@ const mdxConfig = {
 }
 
 
-export default async function Page() {
+export async function generateStaticParams() {
+    return getAllPosts().map(post => ({slug: post.slug}));
+}
 
-    const post = await getPostBySlug();
+export default async function Page({params}) {
 
+    const post = await getPostBySlug(params.slug);
 
+    if(post === null) {
+        return notFound();
+    }
 
     const {metadata, content} = post;
 
-
-    
     return (
-    <div className={s.main}>
-        <Link className={s.back} href={'/blog'}>
-           <FontAwesomeIcon icon={faArrowLeft} size='xl'/>&nbsp;&nbsp;Go back
-        </Link>
-        <div className={s.imageWrapper}>
-            <Image style={{objectFit:'contain', borderRadius:'var(--border-radius)'}} alt='blog photo missing' src={'/profile.jpg'} height={350} width={600}/>
+        <div className={s.main}>
+            <Link className={s.back} href={'/blog'}>
+            <FontAwesomeIcon icon={faArrowLeft} size='xl'/>&nbsp;&nbsp;Go back
+            </Link>
+            <div className={s.imageWrapper}>
+                <Image style={{objectFit:'contain', borderRadius:'var(--border-radius)'}} alt='blog photo missing' src={'/profile.jpg'} fill/>
+            </div>
+            <p className={s.intro}>{metadata.title}</p>
+            <p className={s.postedOn}>{metadata.postedOn}</p>
+            <MDXRemote
+                source={content}
+                components={mdxConfig}
+            />
         </div>
-        <p className={s.intro}>My path to becoming rank 6000 on leetcode</p>
-        <p className={s.postedOn}>September 21, 2023</p>
-        <MDXRemote
-            source={content}
-            components={mdxConfig}
-        />
-    </div>
     )
 }
 

@@ -10,4 +10,30 @@
 .footerText {
     font-size: var(--p-2);
     color: var(--text-secondary);
+    order: 0;
+}
+
+.cc {
+    display: inline-block;
+    text-align: right;
+    margin: 0px;
+   -moz-transform: scaleX(-1);
+   -o-transform: scaleX(-1);
+   -webkit-transform: scaleX(-1);
+   transform: scaleX(-1);
+   filter: FlipH;
+   -ms-filter: "FlipH";
+}
+@media screen and (max-width: 420px) {
+    .main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footerText {
+        margin: 20px 0 40px 0;
+        order: 1;
+
+    }
 }

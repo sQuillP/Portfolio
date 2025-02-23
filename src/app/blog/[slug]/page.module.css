@@ -9,6 +9,7 @@
     width: 600px;
     overflow: hidden;
     border-radius: var(--border-radius);
+    position: relative;
 }
 
 
@@ -64,4 +65,11 @@
     text-decoration: underline;
     cursor: pointer;
     color: var(--text-primary);
+}
+
+
+@media screen and (max-width: 640px) {
+    .imageWrapper {
+        width: 100%;
+    }
 }

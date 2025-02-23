@@ -15,26 +15,38 @@
     padding: 20px;
     box-sizing: border-box;
     display: flex;
+    cursor: pointer;
+    transition: background 200ms linear;
+}
+
+.blogItem:hover {
+    background: var(--bg-secondary);
 }
 
 
 .title {
     font-size: var(--intro);
     color: var(--text-primary);
+    font-weight: bold;
 }
 
 .description {
     color: var(--text-secondary-2);
+    font-size: 14px;
+    margin: 20px 0;
 }
 
 .postedOn {
     color: var(--text-primary);
     font-size: 14px;
+    width: 100%;
 }
 
 .blogCol:nth-child(2) {
-    width: 120px;
+    width: 30%;
+    flex-shrink: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }

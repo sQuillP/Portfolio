@@ -7,13 +7,13 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import Link from 'next/link';
 
 
-
 export default function ProjectCard({title, description, tags, image, link, source}) {
-
+    
+    
     return (
         <div className={s.main}>
             <div className={s.cardImage}>
-                <Image unoptimized src={image} style={{objectFit: 'contain'}} alt='Project image' width={300} height={160} />
+                <Image unoptimized src={image} style={{objectFit: 'contain'}} alt='Project image' fill />
             </div>
                 <p className={s.cardHeader}>{title}</p>
                 <p className={s.description}>{description}</p>

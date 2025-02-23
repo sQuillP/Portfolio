@@ -49,6 +49,11 @@
     padding: 7px;
     border-radius: var(--border-radius);
     transition: 200ms linear all;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .toggleWrapper:hover {
@@ -57,4 +62,11 @@
 
 .link:hover {
     color: var(--text-primary);
+}
+
+
+@media screen and (max-width: 360px) {
+    .link {
+        font-size: 14px;
+    }    
 }

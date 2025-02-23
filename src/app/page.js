@@ -16,6 +16,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard/ProjectCard";
 import BlogPosts from "../components/BlogPosts/BlogPosts";
+import Leetcode from "@/components/Leetcode/Leetcode";
 
 export default function Home() {
 
@@ -28,6 +29,9 @@ export default function Home() {
 
   // getting old, gotta optimize this large calulation
   const age =  useMemo(()=> Math.floor(calculateYears(BIRTHDAY)), []);
+
+
+  console.log(calculateYears(BIRTHDAY));
 
   return (
     <>
@@ -64,7 +68,7 @@ export default function Home() {
       </section>
       <section className={s.section}>
         <div className={s.headerDetails}>
-          <p className={s.h2}>Featured Projects</p>
+          <p className={s.h2}>Projects</p>
           <Link 
             className={s.link} 
             href={"/projects"}
@@ -100,6 +104,7 @@ export default function Home() {
         <BlogPosts
           renderCount={3} 
         />
+        <Leetcode/>
       </section>
     </>
   );
