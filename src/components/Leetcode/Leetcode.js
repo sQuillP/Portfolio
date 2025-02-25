@@ -1,5 +1,7 @@
 import { getLeetcodeData } from '@/utility/leetcode';
 import s from './leetcode.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 // must wrap fetch function for swr integration.
 const colorMap = {
@@ -23,6 +25,7 @@ function formatTime(ms) {
     
 }
 
+const link = 'https://leetcode.com/problems'
 
 export default async function Leetcode() {
 
@@ -31,8 +34,14 @@ export default async function Leetcode() {
     if(leetCodeData === null) {
         // show error fetching leetcode data.
         return (
-            <div>
-                no leetcode data at this time.
+            <div className={s.error}>
+                <p className={s.notfound}>404</p>
+                <p className={s.errorText}>It appears that leetcode servers are down. Maybe try refreshing the page...</p>
+                <p className={s.errorText}>
+                    You can always 
+                    <strong> <a className={s.a} target='_blank' href={'https://leetcode.com/u/William_Pattison/'}>check out my profile</a> </strong> 
+                    to see my profile details
+                </p>
             </div>
         )
     }
@@ -71,10 +80,16 @@ export default async function Leetcode() {
             <div className={s.recentAc}>
                 {
                     submissions.slice(0,5).map(submission => {
+                        console.log(`${link}/${submission.slug}/description/`)
                         return (
                             <div key={submission.titleSlug} className={s.submission}>
                                 <p className={s.submissionText}>{submission.title}</p>
-                                <p className={s.submissionText}>{formatTime(submission.timestamp)}</p>
+                                <div className={s.link}>
+                                    <p className={`${s.submissionText} ${s.timestamp}`}>{formatTime(submission.timestamp)}</p>
+                                    <a target='_blank' style={{marginLeft: '15px'}} href={`${link}/${submission.titleSlug}/description/`}>
+                                        <FontAwesomeIcon icon={faUpRightFromSquare} size='lg' color='var(--text-primary)'/>
+                                    </a>
+                                </div>
                             </div>
                         )
                     })

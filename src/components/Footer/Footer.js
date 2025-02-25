@@ -7,7 +7,7 @@ export default function Footer() {
 
     return (
         <div className={s.main}>
-            <p className={s.footerText}><span className={s.cc}>&copy;</span> {Math.floor(new Date().getFullYear())} your-domain.com</p>
+            <p className={s.footerText}><span className={s.cc}>&copy;</span> {Math.floor(new Date().getFullYear())} | william.it.com</p>
             <SocialLinks/>
         </div>
     )

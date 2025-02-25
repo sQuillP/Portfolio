@@ -1,9 +1,68 @@
 ---
-title: "First Blog on the First Portfolio"
+title: "Finally Made my Portfolio!"
 description: "Every developer needs a portfolio, regardless of your tech stack. So I went ahead and did one of my own..."
 postedOn: February 21, 2025
 slug: my-first-post
 image:
 ---
 
-# Talk about how you built your portfolio project
+After a cold month in February, I have been finally able to finish my developer
+portfolio! I stuck to a simple but effective design. In the bulk of this post,
+I will be talking about the exact tools, styles, and platform that were used along what I have learned
+in the process of building my portfolio.
+
+## Step 1: Design
+
+I am certainly no design expert when it comes to building frontend websites. Though this is definitely something
+that I am refining day-by-day, I wanted to make sure that my design choices would not make other professionals
+think "What is he thinking with these features?". I recently stumbled across a popular frontend developer on YouTube named 
+named [Anthony Sistilli](https://www.youtube.com/@AnthonySistilli), who often makes video reviews of portfolio 
+websites sent in by his viewers. With that being said, I found some great portfolio website designs to choose from,
+and then began the next step in the portfolio-making process.
+
+## Step 2: Framework
+
+Before making my portfolio site, I had good prerequisite knowledge of the React.js framework. I knew that React did not have good SEO, and is definitely not the most performant framework 
+as-is. I have heard many good things about Next.js recently, especially with out-of-the-box capabilities like cachine, routing, SSR, SSG, and
+ISR. Since Next.js is already built on top of react, my next logical step to take was to start learning this framework 
+by **doing**.
+
+## Step 3: Features
+
+- **LeetCode Showcase**: I made it a goal last year to do more than 500 medium leetcode problems to deepen
+my knowledge in the field of data structures and algorithms. I was able to make it to rank ~6000 recently which 
+I never thought I would be able to do. Hard work definitely pays off and I don't plan to stop using this site any 
+time soon.
+- **Resume / Work Information**: Including your resume details on your portfolio site is essential to the employer to gain
+insight on your accomplishments and work history.
+- **Including a blog**: It always helps to convey passions through writing. Having a blog will provide a more 
+complete picture of your ambitions and goals, and most importantly, what you care about.
+- **Contact Page**: Providing a contact page will greatly simplify the gap for people who wish to reach out to you.
+- **Projects**: Maybe one of the most important items to include along with work history. Adding personal projects will 
+help supplement your work history and will demonstrate that you take learning outside of the office.
+
+## Step 4: Libraries
+
+Ok, so now that I have an outline of the design, features, and choice of framework,
+it is now time to look into the libraries that I used to build this site:
+
+- **[Resend](https://resend.com/home)**: Resend is a powerful library that allows for sending emails at scale.
+It is marketed as "Email for developers" and provides an easy subset of tools to get started with 
+sending emails.
+- **[canvas-confetti](https://www.npmjs.com/package/canvas-confetti)**: As the name implies, I use confetti on this site
+- **[gray-matter](https://www.npmjs.com/package/gray-matter)**: Helps with parsing .MDX files and metadata
+- **[next-mdx-remote](https://www.npmjs.com/package/next-mdx-remote/v/0.5.1)** A set of light utilities allowing mdx to be loaded within ```getStaticProps``` or ```getServerSideProps``` and hydrated correctly on the client.
+
+And that's it! I decided not to go with Tailwind or any other UI library. Even though it 
+probably could have taken less time to develop, I felt that it wasn't really necessary as many of the 
+features were very simple to implement.
+
+## Step 5: 🌑/☀️
+
+You can't have a real portfolio site until a light/dark mode is added. Why else would people prefer
+to burn their eyes when viewing your content? Since I didn't have any UI libraries to 
+configure, I just did it from scratch, which was suprisingly simple.
+In case you're curious, it took only ~44 lines (with generous spacing). You can check it out 
+[here](https://github.com/sQuillP/Portfolio/blob/main/src/utility/setTheme.js)
+
+Once completing these 5 steps, you should have a great looking website up in no-time!
