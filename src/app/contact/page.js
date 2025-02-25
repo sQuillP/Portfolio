@@ -3,7 +3,7 @@ import { useState } from 'react';
 import s from './page.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
-
+import { sendEmail } from '@/utility/resend';
 
 
 export default function Page() {
@@ -13,8 +13,14 @@ export default function Page() {
     const [mailContent, setMailContent] = useState('');
 
 
-    function onSubmitEmail() {
-        
+    async function onSubmitEmail() {
+        const status = await sendEmail({name, email, content:mailContent});
+
+        if(status === true) {
+            console.log("Successfully sent email");
+        } else {
+            console.log("unable to send email");
+        }
     }
 
     return (

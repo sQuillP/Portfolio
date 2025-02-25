@@ -1,8 +1,13 @@
+"use client";
+import ExperienceSheet from '../ExperienceSheet/ExperienceSheet';
 import s from './ExperienceTabs.module.css';
+import { useState } from 'react';
 
+import myExperiences from '@/config/myExperiences.json';
 
+export default function ExperienceTabs() {
 
-export default function ExperienceTabs({onSelect, WORK, EDUCATION, selectedTab}) {
+    const [selectedTab, setSelectedTab] = useState('work');
 
     function styleSelected(tab, assignedTab) {
         if (assignedTab === tab) {
@@ -12,21 +17,27 @@ export default function ExperienceTabs({onSelect, WORK, EDUCATION, selectedTab})
     }
 
     return (
+        <>
+
         <div className={s.container}>
             <button 
                 className={s.tabButton}
-                onClick={()=> onSelect(WORK)}
-                style={styleSelected(selectedTab, WORK)}
+                onClick={()=> setSelectedTab("work")}
+                style={styleSelected(selectedTab, 'work')}
             >
                 Work
             </button>
             <button 
-                onClick={()=> onSelect(EDUCATION)}
+                onClick={()=> setSelectedTab("education")}
                 className={s.tabButton}
-                style={styleSelected(selectedTab, EDUCATION)}
+                style={styleSelected(selectedTab, 'education')}
             >
                 Education
             </button>
         </div>
+            <ExperienceSheet
+                experiences={myExperiences[selectedTab]}
+            />
+        </>
     )
 }

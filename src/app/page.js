@@ -1,15 +1,10 @@
-"use client";
 import SocialLinks from "../components/SocialLinks/SocialLinks";
 import s from './page.module.css';
 import Image from "next/image";
 import ResumeDownload from "../components/ResumeDownload/ResumeDownload";
 import calculateYears from '@/utility/time';
-import { useState } from "react";
 import ExperienceTabs from "../components/ExperienceTabs/ExperienceTabs";
-import { useMemo } from "react";
 
-import ExperienceSheet from "../components/ExperienceSheet/ExperienceSheet";
-import myExperiences from '@/config/myExperiences.json';
 import featuredProjects from '@/config/featuredProjects.json';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
@@ -17,21 +12,20 @@ import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard/ProjectCard";
 import BlogPosts from "../components/BlogPosts/BlogPosts";
 import Leetcode from "@/components/Leetcode/Leetcode";
+import { getAllPosts } from "@/utility/posts";
 
 export default function Home() {
 
-  const WORK = 'work';
-  const EDUCATION = 'education';
-  const BIRTHDAY = '02/26/1999';
-  const [selectedTab, setSelectedTab] = useState(WORK);
-
-
 
   // getting old, gotta optimize this large calulation
-  const age =  useMemo(()=> Math.floor(calculateYears(BIRTHDAY)), []);
+  const age = Math.floor(calculateYears('02/26/1999'));
+
+  const allBlogPosts = JSON.parse(JSON.stringify(getAllPosts()));
+
+  console.log('all blog posts', allBlogPosts)
 
 
-  console.log(calculateYears(BIRTHDAY));
+  // console.log(calculateYears(BIRTHDAY));
 
   return (
     <>
@@ -56,15 +50,7 @@ export default function Home() {
         </div>
       </section>
       <section className={s.section}>
-        <ExperienceTabs 
-          WORK={WORK} 
-          selectedTab={selectedTab}
-          EDUCATION={EDUCATION}
-          onSelect={(tab)=> setSelectedTab(tab)}
-        />
-       <ExperienceSheet
-          experiences={myExperiences[selectedTab]}
-       />
+        <ExperienceTabs/>
       </section>
       <section className={s.section}>
         <div className={s.headerDetails}>
@@ -103,7 +89,13 @@ export default function Home() {
           </div>
         <BlogPosts
           renderCount={3} 
+          posts={allBlogPosts}
         />
+      </section>
+      <section className={s.section}>
+        <div className={s.headerDetails}>
+            <p className={s.h2}>LeetCode Stats</p>
+        </div>
         <Leetcode/>
       </section>
     </>

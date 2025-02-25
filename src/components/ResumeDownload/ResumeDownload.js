@@ -1,3 +1,4 @@
+"use client";
 import s from './resumeDownload.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons';
