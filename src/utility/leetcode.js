@@ -40,6 +40,7 @@ export async function getLeetcodeData() {
               'Content-Type': 'application/json',
             },
             body: JSON.stringify({ query }),
+            next: 86400
           });
         const json = await response.json();
         const submissions = json.data.recentAcSubmissionList;

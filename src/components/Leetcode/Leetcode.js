@@ -14,13 +14,12 @@ const colorMap = {
 
 
 function formatTime(ms) {
-    console.log('ms', ms);
     const now = new Date().getTime()/1000 - parseInt(ms,10);
-    console.log(now);
     const daysAgo = Math.floor(now/(60*60*24));
 
     if(daysAgo > 1) return `${daysAgo} days ago`;
 
+    else if (daysAgo == 0) { return "Today";}
     return `${daysAgo} day ago`;
     
 }
@@ -80,7 +79,6 @@ export default async function Leetcode() {
             <div className={s.recentAc}>
                 {
                     submissions.slice(0,5).map(submission => {
-                        console.log(`${link}/${submission.slug}/description/`)
                         return (
                             <div key={submission.titleSlug} className={s.submission}>
                                 <p className={s.submissionText}>{submission.title}</p>

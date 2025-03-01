@@ -7,13 +7,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { notFound } from 'next/navigation';
 
+
+// Map MD components to html for styling purposes.
 const mdxConfig = {
     h1: ({children})=> <h1 className={s.h1}>{children}</h1>,
     h2: ({children})=> <h2 className={s.h2}>{children}</h2>,
     h3: ({children})=> <h3 className={s.h3}>{children}</h3>,
     p: ({children})=> <p className={s.p}>{children}</p>,
     li: ({children})=> <li className={s.li}>{children}</li>,
-    a: ({children})=> <a className={s.a}>{children}</a>
+    a: (props)=> <a href={props.href} target="_blank" className={s.a}>{props.children}</a>
 }
 
 
@@ -23,7 +25,8 @@ export async function generateStaticParams() {
 
 export default async function Page({params}) {
 
-    const post = await getPostBySlug(params.slug);
+    const p = await params;
+    const post = await getPostBySlug(p.slug);
 
     if(post === null) {
         return notFound();
