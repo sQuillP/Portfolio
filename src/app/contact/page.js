@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import toast, { Toaster } from 'react-hot-toast';
 
-
 const toastConfig = {
     duration: 4000,
     position: 'bottom-center',
@@ -17,22 +16,30 @@ const toastConfig = {
 }
 
 
+const responseMap = {
+    "Email has been sent":'✔️',
+    "Please don't spam my inbox":'❌'
+};
+
+
 
 export default function Page() {
 
 
     async function onSubmitEmail(e) {
         e.preventDefault();
+        let response = null;
         try {
-            await fetch('/api/resend', {
+            response = await fetch('/api/resend', {
                 method:'POST',
                 body: new FormData(e.currentTarget)
             });
-            toastConfig.icon='✔️';
-            toast.success("Email has been sent!", toastConfig)
+            response= await response.json();
+            toastConfig.icon = responseMap[response.data];
+            toast.success(response.data, toastConfig)
         } catch(error) {
+            console.error(error);
             toastConfig.icon='❌';
-            console.log(error);
             toast.error("Failed to send email. Check your connection", toastConfig);
         }
     }
