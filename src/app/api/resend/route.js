@@ -37,6 +37,7 @@ export async function POST(req) {
         const response = await resend.emails.send({
             from: 'william.it.com <contact@inquiries.william.it.com>',
             to: ['will.m.pattison@gmail.com'],
+            cc: [email],
             subject: 'Inquiry from a user on your site!',
             replyTo: email,
             text: `From: ${name}\n\n${content}`
