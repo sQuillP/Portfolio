@@ -8,7 +8,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 const rateLimit = new Ratelimit({
     redis:Redis.fromEnv(),
-    limiter: Ratelimit.slidingWindow(3, '10m'), 
+    limiter: Ratelimit.slidingWindow(3, '30m'), 
     analytics: true,
 });
 
