@@ -22,10 +22,7 @@ export default function Home() {
 
   const allBlogPosts = JSON.parse(JSON.stringify(getAllPosts()));
 
-  console.log('all blog posts', allBlogPosts)
 
-
-  // console.log(calculateYears(BIRTHDAY));
 
   return (
     <>

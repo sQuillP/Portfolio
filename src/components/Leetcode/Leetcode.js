@@ -47,8 +47,6 @@ export default async function Leetcode() {
 
     const {user, submissions} = leetCodeData;
 
-    console.log(leetCodeData);
-
     return (
         <>
             <p className={s.problemSolved}>Problems Solved</p>

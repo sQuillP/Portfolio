@@ -30,7 +30,6 @@ export function getAllPosts() {
         const files = fs.readdirSync(blogDirectory,{encoding:'utf-8'});
         const fileData = [];
 
-        console.log('blog directory', blogDirectory);
 
         for(const file of files) {
             const rawFile = fs.readFileSync(`${blogDirectory}/${file}`);

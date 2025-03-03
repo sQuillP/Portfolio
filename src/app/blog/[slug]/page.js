@@ -40,7 +40,7 @@ export default async function Page({params}) {
             <FontAwesomeIcon icon={faArrowLeft} size='xl'/>&nbsp;&nbsp;Go back
             </Link>
             <div className={s.imageWrapper}>
-                <Image style={{objectFit:'contain', borderRadius:'var(--border-radius)'}} alt='blog photo missing' src={'/profile.jpg'} fill/>
+                <Image style={{objectFit:'contain', borderRadius:'var(--border-radius)'}} alt='blog photo missing' src={metadata.image} fill/>
             </div>
             <p className={s.intro}>{metadata.title}</p>
             <p className={s.postedOn}>{metadata.postedOn}</p>

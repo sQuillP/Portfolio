@@ -9,7 +9,7 @@
 function isLeap(year) {
   if(year % 4 == 0) {
     if(year % 100 == 0)
-      return year % 400;
+      return year % 400 === 0;
     return true;
   }
   return false;
@@ -21,18 +21,20 @@ function isLeap(year) {
  * @returns number of years since that day. We are account for leap year so that 
  * my birthday does not come early lol.
  */
+
 export default function calculateYears(date) {
     try {
       const now = new Date();
       const then = new Date(date);
-      const ms = now.getTime() - then.getTime();
+      let ms = now.getTime() - then.getTime();
       let extraDays = 0;
       for(let i = then.getFullYear(); i < now.getFullYear(); i++) {
         if(isLeap(i)) {
           extraDays++;
         }
       }
-      const years = ms/(1000*60*60*24*(365 + extraDays));
+      ms -= (1000*60*60*24)*extraDays;
+      const years = ms/(1000*60*60*24*365);
       return years;
     } catch(error) {
       return 0
