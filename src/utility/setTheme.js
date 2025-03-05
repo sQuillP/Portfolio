@@ -32,7 +32,6 @@ export default function setTheme(theme) {
         localStorage.setItem("CURRENT_THEME", 'light');
     }
 
-    console.log("setting the new theme to ", newTheme);
 
     for(const preset of presets) {
         document.documentElement.style.setProperty(

@@ -29,6 +29,7 @@ export default function Page() {
     async function onSubmitEmail(e) {
         e.preventDefault();
         let response = null;
+        const form = e.currentTarget;
         try {
             response = await fetch('/api/resend', {
                 method:'POST',
@@ -37,6 +38,7 @@ export default function Page() {
             response= await response.json();
             toastConfig.icon = responseMap[response.data];
             toast.success(response.data, toastConfig)
+            form.reset();
         } catch(error) {
             console.error(error);
             toastConfig.icon='❌';

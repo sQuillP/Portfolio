@@ -48,5 +48,19 @@
         "image":"/ifawf.jpg",
         "link":"https://indyfaithandworkforum.org/home",
         "source":"https://github.com/sQuillP/Faith-and-Works-Forum"
+    },
+    {
+        "title": "Bot or Not! (Work in Progress)",
+        "description":"I should be done with this project by end of March - Test your skills to determine the person you're talking to is a bot...or not! You must be the first person to correctly guess or else you lose.",
+        "tags":[
+            "Next.js",
+            "Supabase",
+            "FireStore",
+            "Vercel",
+            "DeepSeek R1"
+        ],
+        "image":"/botornot.png",
+        "link":"#",
+        "source":"#"
     }
 ]
