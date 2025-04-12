@@ -1,8 +1,19 @@
 {
     "work":[
         {
-            "from":"April 2023",
+            "from":"April 2025",
             "to":"current",
+            "title":"Software Engineer II",
+            "location":"Minneapolis, Minnesota, USA",
+            "image":"/kognitiv_edge.jpg",
+            "institution":"Kognitiv Edge",
+            "experiences": [
+                "Recently onboarded as of this April, I shall provide more details as I begin work with Kognitiv Edge."
+            ]
+        },
+        {
+            "from":"April 2023",
+            "to":"April 2025",
             "title":"Software Engineer (contracting)",
             "location":"Indianapolis, IN, USA",
             "image":"/tcs_logo.jpg",

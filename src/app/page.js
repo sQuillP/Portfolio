@@ -35,7 +35,7 @@ export default function Home() {
               old software engineer currently based in Indianapolis 
               contracting at <strong>Eli Lilly & Company!</strong>
             </p>
-            <p className={s.p}>Some abnormal talents of mine include juggling and riding unicycles (but not both).</p>
+            <p className={s.p}>Some abnormal talents of mine include juggling and riding unicycles (but not simultaneously).</p>
           </div>
           <div className={s.profileContainer}>
             <Image alt="wat" height={170} width={170} src={'/profile.jpg'}/>
