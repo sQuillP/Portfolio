@@ -10,7 +10,7 @@ export async function getPostBySlug(slug) {
         const files =  fs.readFileSync(blogDirectory, {encoding:'utf-8'});
 
         const {data, content} = matter(files);
-        return {metadata: {...data, slug: 'test'}, content};
+        return {metadata: {...data}, content};
     }
     catch(error) {
         console.log(error);
