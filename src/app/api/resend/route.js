@@ -1,16 +1,16 @@
 import { NextResponse } from "next/server"
 import { Resend } from "resend";
-import { Ratelimit } from "@upstash/ratelimit";
+// import { Ratelimit } from "@upstash/ratelimit";
 import {Redis } from '@upstash/redis';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 
-const rateLimit = new Ratelimit({
-    redis:Redis.fromEnv(),
-    limiter: Ratelimit.slidingWindow(3, '30m'), 
-    analytics: true,
-});
+// const rateLimit = new Ratelimit({
+//     redis:Redis.fromEnv(),
+//     limiter: Ratelimit.slidingWindow(3, '30m'), 
+//     analytics: true,
+// });
 
 
 export const config= {
@@ -20,13 +20,13 @@ export const config= {
 
 export async function POST(req) {
     try {
-        const ip = req.headers.get("x-forwarded-for");
-        const {success} = await rateLimit.limit(ip);
+        // const ip = req.headers.get("x-forwarded-for");
+        // const {success} = await rateLimit.limit(ip);
 
         // Annoying user
-        if (success === false) {
-            return NextResponse.json({data:"Please don't spam my inbox"}, {status:429});
-        }
+        // if (success === false) {
+        //     return NextResponse.json({data:"Please don't spam my inbox"}, {status:429});
+        // }
 
         // Extract the form data.
         const requestData = await req.formData();
@@ -42,6 +42,8 @@ export async function POST(req) {
             replyTo: email,
             text: `From: ${name}\n\n${content}`
         });
+
+        console.log(response.data);
 
         return NextResponse.json({data:"Email has been sent"},{status:200})
     } catch(error) {

@@ -8,7 +8,11 @@
             "image":"/kognitiv_edge.jpg",
             "institution":"Kognitiv Edge",
             "experiences": [
-                "Recently onboarded as of this April, I shall provide more details as I begin work with Kognitiv Edge."
+                "Delivered performance-focused End-of-Training reports, emphasizing key metrics and trends in Special Forces training programs.",
+                "Built a performant location API with Rust and Rocket powering various frontend location-based features and functionality",
+                "Led critical updates to the Hyper-Enabled Instructor Platform’s data model leveraging Microsoft Dataverse and TypeScript to support evolving application needs.",
+                "Maintained and published a suite of internal npm packages for KE using NX to streamline monorepo management.",
+                "Azure, TypeScript, TerraForm, Microsoft Dataverse, Jest, Powerapps, and some Rust."
             ]
         },
         {
@@ -66,6 +70,17 @@
             "experiences":[
                 "Ability to deploy and secure applications, services, and infrastructure on Google Cloud Platform.",
                 "Certified to work with public clouds and on-premises solutions."
+            ]
+        },
+        {
+            "from": "May 2025",
+            "to": "November 2025",
+            "image":"/usaf.png",
+            "title": "For contracting with United States Air Force",
+            "institution":"Common Access Card Holder",
+            "location":"",
+            "experiences":[
+                "Security credential for United States Department of defense, granting authorized access to sensitive information and government facilities."
             ]
         }
     ]

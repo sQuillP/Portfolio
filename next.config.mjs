@@ -4,7 +4,20 @@ import createMDX from '@next/mdx'
 const nextConfig = {
   // Configure `pageExtensions` to include markdown and MDX files
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
-  
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=86400, stale-while-revalidate=59',
+          },
+        ],
+      },
+    ];
+  },
+
   async redirects() {
     return [
       // Basic redirect

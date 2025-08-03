@@ -29,20 +29,30 @@ allQuestionsCount {
 `;
 
 
+const fetchWithTimeout = async (delay) => {
+  const controller = new AbortController();
 
+  const timeout = setTimeout(()=> {
+    controller.abort();
+  },delay)
+
+  const response = await fetch('https://leetcode.com/graphql', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ query }),
+    signal: controller.signal
+  });
+  clearTimeout(timeout);
+  const json = await response.json();
+  return json;
+}
 
 
 export async function getLeetcodeData() {
     try {
-        const response = await fetch('https://leetcode.com/graphql', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ query }),
-            next: 86400
-          });
-        const json = await response.json();
+        const json = await fetchWithTimeout(1500);
         const submissions = json.data.recentAcSubmissionList;
         const user = json.data.matchedUser;
         const totalQuestions = json.data.allQuestionsCount;

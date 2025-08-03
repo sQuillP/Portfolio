@@ -31,9 +31,7 @@ export default function Home() {
           <div className={s.textDetails}>
             <h1 className={s.h1}>Hey! It's Will ✌️</h1>
             <p className={s.p}>
-              I am a {age} year 
-              old software engineer currently based in Indianapolis 
-              contracting at <strong>Eli Lilly & Company!</strong>
+              I am a {age} year old software engineer at Kognitiv edge currently engineering data solutions for the United States Department of Defense (Uncle Sam).
             </p>
             <p className={s.p}>Some abnormal talents of mine include juggling and riding unicycles (but not simultaneously).</p>
           </div>
