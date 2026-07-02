@@ -15,7 +15,7 @@ import { getAllPosts } from "@/utility/posts";
 import LeetcodeWrapper from "@/components/Leetcode/LeetcodeWrapper";
 
 
-export const maxDuration = 300; // Extends timeout to 5 minutes
+export const maxDuration = 60; // Extends timeout to 5 minutes
 
 export default function Home() {
 
