@@ -14,6 +14,8 @@ import BlogPosts from "../components/BlogPosts/BlogPosts";
 import Leetcode from "@/components/Leetcode/Leetcode";
 import { getAllPosts } from "@/utility/posts";
 
+export const maxDuration = 300; // Extends timeout to 5 minutes
+
 export default function Home() {
 
 
