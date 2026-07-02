@@ -11,8 +11,9 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard/ProjectCard";
 import BlogPosts from "../components/BlogPosts/BlogPosts";
-import Leetcode from "@/components/Leetcode/Leetcode";
 import { getAllPosts } from "@/utility/posts";
+import LeetcodeWrapper from "@/components/Leetcode/LeetcodeWrapper";
+
 
 export const maxDuration = 300; // Extends timeout to 5 minutes
 
@@ -93,7 +94,7 @@ export default function Home() {
         <div className={s.headerDetails}>
             <p className={s.h2}>LeetCode Stats</p>
         </div>
-        <Leetcode/>
+        <LeetcodeWrapper/>
       </section>
     </>
   );
