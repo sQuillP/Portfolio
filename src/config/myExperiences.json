@@ -8,11 +8,12 @@
             "image":"/kognitiv_edge.jpg",
             "institution":"Kognitiv Edge",
             "experiences": [
-                "Delivered performance-focused End-of-Training reports, emphasizing key metrics and trends in Special Forces training programs.",
-                "Built a performant location API with Rust and Rocket powering various frontend location-based features and functionality",
-                "Led critical updates to the Hyper-Enabled Instructor Platform’s data model leveraging Microsoft Dataverse and TypeScript to support evolving application needs.",
-                "Maintained and published a suite of internal npm packages for KE using NX to streamline monorepo management.",
-                "Azure, TypeScript, TerraForm, Microsoft Dataverse, Jest, Powerapps, and some Rust."
+                "Key contributor – Part of a 3-person engineering team that architected and delivered a $1.5 million dollar mission-critical software suite (HEI 1.0 and HEI NOVA) for the US Army Special Forces (Green Berets).",
+                "Offline-First Browser Engineering – Developed an offline-first storage engine using Web Workers, DexieDB, and Origin Private File System (OPFS). Offering data persistence and synchronization for remote / offline environments requiring minimal network connectivity.",
+                "Internal Tooling & Monorepo Management – Authored a majority of @ke-libraries/ui which standardized layouts and web components intended for fast-paced development in all KE products.",
+                "Core Product Engineering: Owned and solely developed a candidate intelligence dashboard (search, analytics, exam overview) that was selected for demonstration to senior leadership within United States Army Special Operations Command, contributing to stakeholder evaluation and product direction.",
+                "Devops and Data Orchestration – Engineered a fault-tolerant TypeScript CLI tool to automate complex data seeding supporting 40+ relational tables in production for IL-5 and IL-2 government cloud environments.",
+                "Migration & Reporting - Developed candidate report automation software for HEI 1.0 (Dataverse) and successfully migrated the logic to the NOVA data model (PostgreSQL) resulting in 50% speedup. Built automated pipelines to process these independent data sources for candidate performance tracking against cohort-wide KPIs."
             ]
         },
         {
