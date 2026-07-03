@@ -8,7 +8,7 @@
             "image":"/kognitiv_edge.jpg",
             "institution":"Kognitiv Edge",
             "experiences": [
-                "Key Contributor – Part of a 3-person engineering team that architected and delivered a mission-critical software suite for U.S. Army specialized commands.",
+                "Key contributor – Part of a 3-person engineering team that architected and delivered a mission-critical software for the US Army specialized commands. ",
                 "Offline-First Browser Engineering – Developed an offline-first storage engine using Web Workers, DexieDB, and Origin Private File System (OPFS). Offering data persistence and synchronization for remote / offline environments requiring minimal network connectivity.",
                 "Internal Tooling & Monorepo Management – Authored the majority of the enterprise internal UI library, standardizing layouts and web components to accelerate fast-paced development across multiple product lines.",         
                 "Core Product Engineering – Owned and solely developed a candidate intelligence dashboard (search, analytics, exam overview) that was selected for demonstration to senior Department of Defense (DoD) leadership, contributing to stakeholder evaluation and product direction.",
