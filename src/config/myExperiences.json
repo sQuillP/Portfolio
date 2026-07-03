@@ -8,7 +8,7 @@
             "image":"/kognitiv_edge.jpg",
             "institution":"Kognitiv Edge",
             "experiences": [
-                "Key contributor – Part of a 3-person engineering team that architected and delivered a $1.5 million dollar mission-critical software suite (HEI 1.0 and HEI NOVA) for the US Army Special Forces (Green Berets).",
+                "Key contributor – Part of a 3-person engineering team that architected and delivered a 7-figure mission-critical software suite (HEI 1.0 and HEI NOVA) for the US Army Special Forces (Green Berets).",
                 "Offline-First Browser Engineering – Developed an offline-first storage engine using Web Workers, DexieDB, and Origin Private File System (OPFS). Offering data persistence and synchronization for remote / offline environments requiring minimal network connectivity.",
                 "Internal Tooling & Monorepo Management – Authored a majority of @ke-libraries/ui which standardized layouts and web components intended for fast-paced development in all KE products.",
                 "Core Product Engineering: Owned and solely developed a candidate intelligence dashboard (search, analytics, exam overview) that was selected for demonstration to senior leadership within United States Army Special Operations Command, contributing to stakeholder evaluation and product direction.",
