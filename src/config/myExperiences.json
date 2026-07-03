@@ -8,13 +8,13 @@
             "image":"/kognitiv_edge.jpg",
             "institution":"Kognitiv Edge",
             "experiences": [
-                "Key contributor – Part of a 3-person engineering team that architected and delivered a 7-figure mission-critical software suite (HEI 1.0 and HEI NOVA) for the US Army Special Forces (Green Berets).",
+                "Key Contributor – Part of a 3-person engineering team that architected and delivered a mission-critical software suite for U.S. Army specialized commands.",
                 "Offline-First Browser Engineering – Developed an offline-first storage engine using Web Workers, DexieDB, and Origin Private File System (OPFS). Offering data persistence and synchronization for remote / offline environments requiring minimal network connectivity.",
-                "Internal Tooling & Monorepo Management – Authored a majority of @ke-libraries/ui which standardized layouts and web components intended for fast-paced development in all KE products.",
-                "Core Product Engineering: Owned and solely developed a candidate intelligence dashboard (search, analytics, exam overview) that was selected for demonstration to senior leadership within United States Army Special Operations Command, contributing to stakeholder evaluation and product direction.",
+                "Internal Tooling & Monorepo Management – Authored the majority of the enterprise internal UI library, standardizing layouts and web components to accelerate fast-paced development across multiple product lines.",         
+                "Core Product Engineering – Owned and solely developed a candidate intelligence dashboard (search, analytics, exam overview) that was selected for demonstration to senior Department of Defense (DoD) leadership, contributing to stakeholder evaluation and product direction.",
                 "Devops and Data Orchestration – Engineered a fault-tolerant TypeScript CLI tool to automate complex data seeding supporting 40+ relational tables in production for IL-5 and IL-2 government cloud environments.",
-                "Migration & Reporting - Developed candidate report automation software for HEI 1.0 (Dataverse) and successfully migrated the logic to the NOVA data model (PostgreSQL) resulting in 50% speedup. Built automated pipelines to process these independent data sources for candidate performance tracking against cohort-wide KPIs."
-            ]
+                "Migration & Reporting – Developed candidate report automation software for a legacy data ecosystem and successfully migrated the logic to a modern PostgreSQL data model, resulting in a 50% speedup. Built automated pipelines to process these independent data sources for candidate performance tracking against cohort-wide KPIs."
+]
         },
         {
             "from":"April 2023",
