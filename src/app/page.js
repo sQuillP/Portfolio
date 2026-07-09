@@ -50,7 +50,7 @@ export default function Home() {
       <section className={s.section}>
         <ExperienceTabs/>
       </section>
-      <section className={s.section}>
+      {/* <section className={s.section}>
         <div className={s.headerDetails}>
           <p className={s.h2}>Projects</p>
           <Link 
@@ -74,13 +74,13 @@ export default function Home() {
             })
           }
         </div>
-      </section>
+      </section> */}
       <section className={s.section}>
           <div className={s.headerDetails}>
             <p className={s.h2}>Blog Posts</p>
             <Link 
               className={s.link} 
-              href={"/projects"}
+              href={"/blog"}
             >
               See More  <FontAwesomeIcon style={{marginLeft: 10}} icon={faArrowRight} size="xl" color="inherit"/>
           </Link>
@@ -90,12 +90,12 @@ export default function Home() {
           posts={allBlogPosts}
         />
       </section>
-      <section className={s.section}>
+      {/* <section className={s.section}>
         <div className={s.headerDetails}>
             <p className={s.h2}>LeetCode Stats</p>
         </div>
         <LeetcodeWrapper/>
-      </section>
+      </section> */}
     </>
   );
 }

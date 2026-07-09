@@ -34,9 +34,9 @@ export default function Navbar() {
                     <div className={s.navItem}>
                         <Link className={s.link} href={'/'}>Home</Link>
                     </div>
-                    <div className={s.navItem}>
+                    {/* <div className={s.navItem}>
                         <Link className={s.link} href={'/projects'}>Projects</Link>
-                    </div>
+                    </div> */}
                     <div className={s.navItem}>
                         <Link className={s.link} href={'/blog'}>Blog</Link>
                     </div>
